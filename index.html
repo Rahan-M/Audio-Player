@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-        <li class="brand"><img src="content/logo.png" alt="Spotify"></li>
-        <li>Home</li>
-        <li>About</li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li class="brand"><img src="content/logo.png" alt="Spotify">Spotify</li>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Best Of NCS -  No Copyright Sounds</h1>
+            <div class="songlist"></div>
+            <div class="songbanner"></div>
+        </div>
+        <input type="range" name="range" id="progbar" min="0" max="0">
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

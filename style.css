@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color:white;
+}
+
+nav{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height:4rem;
+    background-color: black;
+}
+nav ul li{
+    padding: 0 12px;
+}
+.brand{
+    display:flex;
+    align-items: center;
+    margin: 0 0 3px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.brand img{
+    width:50px;
+    padding:0 5px;
+}
