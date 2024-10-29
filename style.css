@@ -5,6 +5,10 @@
     color:white;
 }
 
+body{
+    background-color: gray;
+}
+
 nav{
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
@@ -16,7 +20,7 @@ nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
-    height:4rem;
+    height:3.8rem;
     background-color: black;
 }
 nav ul li{
@@ -32,4 +36,50 @@ nav ul li{
 .brand img{
     width:50px;
     padding:0 5px;
+}
+.container{
+    background-color: #111100;
+    height:62vh;
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    width:65%;
+    margin:1.8rem auto;
+    border-radius: 15px;
+    background-image: url("/Spotify-Clone/content/bg.jpg");
+    background-size: cover;
+    padding:2rem;
+}
+
+
+.bottombar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:70px;
+    width:100%;
+    background-color: black;
+    position: fixed;
+    bottom:0;
+    padding: 1rem 0 0 0;
+}
+#progbar{
+    width:80vw;
+}
+.icons{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    align-items: center;
+    cursor: pointer;
+}
+.caret{
+    font-size: 2rem;
+}
+.pause{
+    font-size: 1.9rem;
 }
