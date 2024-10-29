@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    color:white;
 }
 
 body{
@@ -10,6 +9,7 @@ body{
 }
 
 nav{
+    color:white;
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -38,6 +38,7 @@ nav ul li{
     padding:0 5px;
 }
 .container{
+    color:white;
     background-color: #111100;
     height:62vh;
     font-family: "Open Sans", serif;
@@ -45,17 +46,18 @@ nav ul li{
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-        "wdth" 100;
+    "wdth" 100;
     width:65%;
     margin:1.8rem auto;
     border-radius: 15px;
-    background-image: url("/Spotify-Clone/content/bg.jpg");
+    background-image: url("content/bg.jpg");
     background-size: cover;
     padding:2rem;
 }
 
 
 .bottombar{
+    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,4 +84,21 @@ nav ul li{
 }
 .pause{
     font-size: 1.9rem;
+}
+.songitem{
+    background-color: white;
+    color:black;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    width:40%;
+    border-radius: 1rem;
+    padding:0.2rem 0.2rem 0.2rem 1rem ;
+    margin-bottom: 0.7rem;
+}
+.songitem img{
+    height: 3rem;
+}
+.songitem i{
+    font-size: 2rem;
 }
