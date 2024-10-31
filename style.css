@@ -5,7 +5,8 @@
 }
 
 body{
-    background-color: gray;
+    background-color: #1F1F1F;
+    min-height: 136vh;
 }
 
 nav{
@@ -40,7 +41,7 @@ nav ul li{
 .container{
     color:white;
     background-color: #111100;
-    height:62vh;
+    height:100vh;
     font-family: "Open Sans", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -48,31 +49,29 @@ nav ul li{
     font-variation-settings:
     "wdth" 100;
     width:65%;
-    margin:1.8rem auto;
-    border-radius: 15px;
+    margin:1.8rem auto 1.8rem auto;
+    border-radius: 3rem;
     background-image: url("content/bg.jpg");
-    background-size: cover;
+    background-size:cover;
     padding:2rem;
 }
-
-
 .bottombar{
     color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:70px;
+    height:60px;
     width:100%;
     background-color: black;
     position: fixed;
     bottom:0;
-    padding: 1rem 0 0 0;
+    padding: 0.5rem 0 0 0;
 }
 #progbar{
     width:80vw;
 }
 .icons{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     display: flex;
     justify-content: center;
     gap:2rem;
@@ -90,15 +89,37 @@ nav ul li{
     color:black;
     display:flex;
     align-items: center;
-    gap:2rem;
-    width:40%;
     border-radius: 1rem;
-    padding:0.2rem 0.2rem 0.2rem 1rem ;
-    margin-bottom: 0.7rem;
+    padding:0.2rem 0.5rem 0.2rem 1rem ;
+    margin-top: 0.7rem;
+    height:3rem;
+}
+.songtitle{
+    width:6rem;
+    margin:0 3rem 0 4rem;
+}
+.timestamp{
+    margin: 0 5rem 0 auto;
+}
+.songlist{
+    width:58%;
 }
 .songitem img{
-    height: 3rem;
+    height: 3.2rem;
+    border-radius: 50%;
 }
 .songitem i{
     font-size: 2rem;
+    cursor: pointer;
+}
+.playing_animation{
+    position:absolute;
+    left:9.5rem;
+    bottom:0;
+    display: flex;
+    align-items: center;
+}
+.playing_animation img{
+    height:2rem;
+    margin-right: 1rem;
 }
