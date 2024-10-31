@@ -23,3 +23,6 @@ Open Sans
   font-variation-settings:
     "wdth" 100;
 }
+
+//pauseicon
+<i class="fa-solid fa-pause"></i>

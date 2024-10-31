@@ -69,6 +69,7 @@ nav ul li{
 }
 #progbar{
     width:80vw;
+    cursor:pointer;
 }
 .icons{
     margin-top: 0.5rem;
@@ -95,7 +96,7 @@ nav ul li{
     height:3rem;
 }
 .songtitle{
-    width:6rem;
+    width:10rem;
     margin:0 3rem 0 4rem;
 }
 .timestamp{
@@ -106,6 +107,7 @@ nav ul li{
 }
 .songitem img{
     height: 3.2rem;
+    width:3.2rem;
     border-radius: 50%;
 }
 .songitem i{
@@ -122,4 +124,6 @@ nav ul li{
 .playing_animation img{
     height:2rem;
     margin-right: 1rem;
+    opacity:0;
+    transition: opacity 0.5s ease-in;
 }
