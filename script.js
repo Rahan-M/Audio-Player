@@ -1,5 +1,5 @@
-console.log("Welcome to Spotify");
-
+// to do - fix the durations and enable feature to pause video by the song selector itself
+// make it responsive
 // Initialize the Variables
 let songIndex=1;
 let audioElement= new Audio('/content/songs/1.mp3');
@@ -25,7 +25,7 @@ let songNames=[
 
 
 // playing songs
-const updatemasterplay=()=>{
+const updateplay=()=>{
     let Play=document.getElementById(songIndex);
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
@@ -43,7 +43,7 @@ const updatemasterplay=()=>{
         gif.style.opacity='0';
     }
 }
-masterPlay.addEventListener('click',updatemasterplay);
+masterPlay.addEventListener('click',updateplay);
 
 // Listen to Events
 audioElement.addEventListener('timeupdate',()=>{
@@ -57,8 +57,6 @@ progBar.addEventListener('click',()=>{
 
 
 let songItems=Array.from(document.querySelectorAll(".songitem"));
-
-
 songItems.forEach((element,i) => {
     let img=element.querySelector("img");
     let title=element.querySelector(".songtitle");
@@ -66,24 +64,27 @@ songItems.forEach((element,i) => {
     title.innerText=songNames[i].songName;
     // to do next : Set Duration
 });
+
+
 const makeAllplays=()=>{
-        Array.from(document.querySelectorAll(".songselector")).forEach((element)=>{
+    Array.from(document.querySelectorAll(".songselector")).forEach((element)=>{
         element.classList.add('fa-circle-play');
         element.classList.remove('fa-circle-pause');
     })
 }
+
+// individiua buttons
 Array.from(document.querySelectorAll(".songselector")).forEach((element)=>{
     element.addEventListener('click',(e)=>{
-        makeAllplays();
-        console.log(songIndex);
-        songIndex=element.id;
-        label.innerText=songNames[songIndex-1].songName;
-        element.classList.remove('fa-circle-play');
-        element.classList.add('fa-circle-pause');
-        audioElement.currentTime=0;
-        audioElement.src=`/content/songs/${element.id}.mp3`;
-        audioElement.play();
-        updatemasterplay();
+        if(songIndex!==element.id){
+            songIndex=element.id;
+            audioElement.src=`/content/songs/${songIndex}.mp3`;
+            makeAllplays();
+            updateplay();
+            label.innerText=songNames[songIndex-1].songName;
+        }else{
+            updateplay();
+        }
     });
 });
 
@@ -92,19 +93,35 @@ let previous=document.querySelector('.previous');
 
 next.addEventListener('click',()=>{
     if(songIndex!==10){
+        songIndex=parseInt(songIndex);
         songIndex+=1;
+        label.innerText=songNames[songIndex-1].songName;
+        let Play=document.getElementById(songIndex);
+        makeAllplays();
         audioElement.src=`/content/songs/${songIndex}.mp3`;
         audioElement.play();
-        makeAllplays();
-        updatemasterplay();
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause');
+        Play.classList.remove('fa-circle-play');
+        Play.classList.add('fa-circle-pause');
+        gif.style.opacity='1';
     }
 });
 previous.addEventListener('click',()=>{
     if(songIndex!==1){
+        songIndex=parseInt(songIndex);
         songIndex-=1;
+        console.log(songIndex,typeof(songIndex));
+        let Play=document.getElementById(songIndex);
+        console.log(Play);
+        label.innerText=songNames[songIndex-1].songName;
+        makeAllplays();
         audioElement.src=`/content/songs/${songIndex}.mp3`;
         audioElement.play();
-        makeAllplays();
-        updatemasterplay();
+        masterPlay.classList.remove('fa-play');
+        masterPlay.classList.add('fa-pause');
+        Play.classList.remove('fa-circle-play');
+        Play.classList.add('fa-circle-pause');
+        gif.style.opacity='1';
     }
 });
